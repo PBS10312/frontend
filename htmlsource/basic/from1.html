@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        form : 다른 form 을 자식요소로 사용할 수 없음 (form 안에 form 못옴)
+        속성
+        1) * action : 경로 (전송한 정보를 처리할 웹페이지 URL)
+             ㄴ "" : 자기자신 
+        2) * method : GER , POST
+        3) autocomplete : 자동완성 사용 여부 (default -on)
+        4) name : 고유한 양식의 이름
+        5) novalidate : 서버로 데이터 전송 시 유효성 검사하지 않음
+           ㄴ 속성을 지정 안하면 
+              ㄴ email : 입력값이 존재할 때 간단하게 이메일 형식이 맞는지 확인
+              ㄴ required : 필수입력
+
+       - 경로 해석 -
+        http://192.168.55.2:5500/basic/from1.html?fruits=on&fruits1=on
+
+        http://192.168.55.2:5500/ => 임의로 서버를 만들었기 때문에 포트서버
+        ex) http://ip주소:포트번호 인것
+
+        
+        /basic/from1.html? => 위에 설명한 "" 기준은 , ? 를 기준으로 삼음
+        ex) http://ip주소:포트번호/basic/from1.html 인것
+
+        fruits=on&fruits1=on
+        서버경로?키=값&키=값
+
+        get 방식 : 데이터 전송 시 아래와 같은 형태로 따라감
+
+        ?text1=123&name=123&fruits=포도&fruits1=바나나
+        
+        키 : name
+        값 : text(입력값) , checkbox,radio(value)
+
+
+        input type
+        1) text : 문자 한 행 입력용
+        2) radio : 여러 개 중에서 하나 선택 용으로 사용
+        3) checkbox : 여러 개 중에서 여러 개 선택 용으로 사용
+        4) button : 모양만 버튼 모양으로 나옴
+        5) reset : form 안의 입력 내용 초기화
+        6) submit : action 이 지정한 곳으로 폼 내용 전송
+
+    -->
+    <form action="" method="get" autocomplete="off" name="myForm" novalidate></form>
+    
+    <!-- get : default 임 -->
+    <form action=""></form>
+    
+    <form action="" method="get">
+      <!-- input -->
+      <div><input type="text" name="text1"/></div>
+      <div><input type="text" name="name" id="" required/></div>
+      <div>
+        <input type="radio" name="fruits" id="" value="사과"/>사과
+        <input type="radio" name="fruits" id="" value="포도"/>포도
+        <input type="radio" name="fruits" id="" value="바나나"/>바나나
+    </div>
+    <div>
+        <input type="checkbox" name="fruits1" id="" value="사과"/>사과
+        <input type="checkbox" name="fruits1" id="" value="포도"/>포도
+        <input type="checkbox" name="fruits1" id="" value="바나나"/>바나나
+    </div>
+    <div>
+        <input type="color" name="" id="">
+        <input type="number" name="" id="">
+    </div>
+    <div>
+        <input type="date" name="" id="">
+        <input type="datetime" name="" id="">
+        <input type="datetime-local" name="" id="">
+        <input type="month" name="" id="">
+        <input type="week" name="" id="">
+        <input type="time" name="" id="">
+    </div>
+    <div>
+        <input type="email" name="email" id="" placeholder="email">
+        <input type="password" name="password" id="" placeholder="password">
+    </div>
+    <div>
+        <input type="file" name="" id="">
+    </div>
+    <div>
+        <textarea name="" id="" rows="10" cols="30"></textarea>
+    </div>
+    <div>
+        <select name="" id="">
+            <option value="사과">사과</option>
+            <option value="포도">포도</option>
+            <option value="바나나">바나나</option>
+            <option value="복숭아">복숭아</option>
+        </select>
+    </div>
+    <div>
+        <input type="button" value="버튼">
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </div>
+   
+    </form>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* [targer] {
+            text-decoration : none;
+        } */
+        [target ="_blank"] {
+            text-decoration: none;
+        }
+        [title~="sudal"] {
+            border: 5px solid red;
+        }
+        [class^="test"] {
+            background: yellowgreen;
+        }
+        [class$="test"] {
+            background: palevioletred;
+        }
+        [class*="test"] {
+            background: gold;
+        }
+        /* font-weight:bold, border-radius:20px, padding:10px */
+        /* ---------------내꺼---------------------------------------- */
+        [class^="btn"] {
+            font-weight: bold;
+        }
+        [class^="btn"] {
+            border-radius: 20px;
+        }
+        [class^="btn"] {
+            padding: 10px;
+        }
+        [class~="btn_success"] {
+            color: green;
+        }
+        [class~="btn_danger"] {
+            color: red;
+        }
+        /* ----------------------------------------------------------- */
+        [class^="btn-"] {
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        [class$="success"] {
+            color: green;
+        }
+        [class$="danger"] {
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" target="_blank">google</a>></li>
+        <li><a href="#" target="_blank">naver</a>></li>
+        <li><a href="#" target="_self">daum</a>></li>
+    </ul>
+    <img src="../../image/sudal.jpg" alt="" title="cute sudal">
+    <img src="../../image/sudal.jpg" alt="" title="pretty sudal">
+    <img src="../../image/sudal.jpg" alt="" title="yes sudals">
+    <div class="testing">First Div</div>
+    <div class="second_test">Second Div</div>
+    <div class="test">Third Div</div>
+    <div class="test_ex">Fourth Div</div>
+    <button class="btn_success">Success</button>
+    <button class="btn_danger">Danger</button>
+    <button >Nomal</button>
+</body>
+</html>

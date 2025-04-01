@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+    <h1>상품 주문서</h1>
+    <fieldset>
+        <legend>개인정보</legend>
+        <ul>
+            <li>이름</li>
+            <div><input type="text" name="" id=""></div>
+            <li>연락처</li>
+            <div><input type="text" name="" id=""></div>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>배송지 정보</legend>
+        <ul>
+            <li>주소</li>
+            <div><input type="text" name="" id=""></div>
+            <li>전화번호</li>
+            <div><input type="text" name="" id=""></div>
+            <li>메모</li>
+            <div>
+                <textarea name="" id="" rows="5" cols="50"></textarea>
+            </div>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>주문 정보</legend>
+        <ul>
+            <li>
+                <input type="checkbox" name="food" id="" value="">
+                <label for="food">과테말라 안티구아<sub>(100g)</sub></label>
+                <input type="number" name="num" id="num" max="9999" min="1"  placeholder="0"/>개
+                
+            </li>
+            <li>
+                <input type="checkbox" name="food" id="" value="" >
+                <label for="food">인도네시아 만델링<sub>(100g)</sub></label>
+                <input type="number" name="num" id="num" max="9999" min="1"  placeholder="0"/>개
+            </li>
+            <li>
+                <input type="checkbox" name="food" id="" value="">
+                <label for="food">탐라는도다(블렌딩)<sub>(100g)</sub></label>
+                <input type="number" name="num" id="num" max="9999" min="1"  placeholder="0"/>개
+            </li>
+           
+        </ul>
+    
+    </fieldset>
+    <div>
+        <input type="button" value="주문하기">
+        <input type="reset" value="다시작성">
+    </div>
+</form>
+</body>
+</html>

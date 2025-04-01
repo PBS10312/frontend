@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        속성
+        
+        1) value : radio , checkbox , option , submit , reset , button 필수사용 , 나머지는 선택
+        2) readonly : 수정불가
+        3) required : 필수입력
+        4) autofocus : 입력 수신대기
+        5) disabled : 이용 불가 (막는거)
+        6) size,maxlength,min,max : 입력창 크기 , 입력시 갯수제한 , 
+        7) multiple : file 여러개 설정
+        8) pattern : regex를 이용한 입력형식 지정
+        9) placeholder : 사용자에게 예시보여주기? (form1 확인)
+        10) setp : 단위 설정 => 1개씩 올라가는거 뭐 3개씩 5개씩 이런식으로? 
+        -->
+        <fieldset>
+            <legend>개인정보</legend>
+            <form action="">
+                <div>
+                    <input type="text" name="" id="">
+                </div>
+            </form>
+        </fieldset>
+        <!-- fieldset 박스 만들어줌 -->
+
+    <form action="" method="get">
+        <div>
+            <!-- [A-Za-z]{3} => 대문자 소문자 알파벳 3자리 -->
+            <!-- [0-9]{3}-[0-9]{4}-[0-9]{4} => 숫자3자리 - 숫자4자리 - 숫자4자리 -->
+            <input type="text" name="code" id="" pattern="[A-Za-z]{3}" />
+            <input type="tel" name="tel" id="" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" />
+        </div>
+        <div>
+            <input type="file" name="" id="" multiple>
+        </div>
+        <div>
+            <label for="datemax">date1</label>
+            <input type="date" name="datemax" id="datemax" max="2025-04-01" min="2025-01-01"/>
+        </div>
+        <div>
+            <label for="num">num</label>
+            <input type="number" name="num" id="num" max="10" min="1" step="3"/>
+        </div>
+        <div>
+            <label for="name">name</label>
+            <input type="text" name="name" id="name" value="홍길동" disabled />
+        </div>
+        <div>
+            <label>
+                age
+                <input type="text" name="name" id="name" required autofocus size="10" maxlength="2"/>
+            </label>
+        </div>
+        <div>
+            <label for="gender">성별</label>
+            <input type="checkbox" name="gender" id="" value="남" />남
+            <input type="checkbox" name="gender" id="" value="여" />여
+        </div>
+        <select name="fruits" id="">
+            <option value="사과">사과</option>
+            <option value="포도">포도</option>
+            <option value="딸기">딸기</option>
+        </select>
+        <div>
+            <input type="submit" value="전송" />
+            <input type="reset" value="초기화" />
+        </div>
+    </form>
+</body>
+</html>

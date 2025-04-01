@@ -1,0 +1,15 @@
+
+    00# 하면 title (ex) h1#title
+    00. 하면 class (ex) h1.title
+
+    <h1 id="title"></h1>
+    <h1 class="title"></h1>
+    <h1 id="title" class="title"></h1>
+    <div id="herder"></div>
+
+    -- ul>li*3  --
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>

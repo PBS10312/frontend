@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* div * {
+        color: cyan;
+      } */
+      /* div h2{
+        color: blanchedalmond;
+      } */
+      div > h2{  /* > 를 쓰면 자식만 자손까지는 안감 */
+        color: blanchedalmond;
+      }
+    </style>
+</head>
+<body>
+  <!-- 
+  boby 자식 : h1 h2 div
+  body 자손 : h1 h2 div p => 공백한칸
+  -->
+    <h1 id="title">css 기본 문법</h1>
+    <h2 class="head">자손 / 자식 선택자</h2>
+    <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea corrupti aperiam deleniti ex unde
+          perferendis. Porro harum atque minima enim consequatur non, accusamus et eveniet dolor quis laudantium, voluptatem
+          libero molestias beatae vel iure perspiciatis, quisquam est aperiam. Quia sapiente obcaecati ratione aliquam unde
+          delectus soluta deserunt laboriosam. Placeat neque voluptatibus laudantium ipsam corporis libero velit magnam
+          explicabo officia nobis perferendis, labore error ipsum voluptate consequuntur ut repudiandae voluptates quam,
+          alias architecto debitis fugiat eligendi inventore? Quidem velit modi ut corporis, ipsum atque quis ad, laudantium
+          doloribus maxime adipisci inventore molestias eaque autem odio consequatur a, voluptatem recusandae quibusdam!
+        </p>
+    </div>
+    <div>
+      <h2>자손 선택자</h2>
+    </div>
+  <div>
+    <nav>
+     <h2>자손 선택자</h2>
+    </nav>
+  </div>
+</body>
+</html>
