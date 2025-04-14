@@ -1,0 +1,70 @@
+서버와 클라이언트
+
+하드웨어적 서버
+소프트웨어 서버 - 리눅스(유닉스), 윈도우즈서버 설치된 서버
+
+Ajax(Asynchronous JavaScript and XML) - 비동기식 자바스크립트와 XML (JSON을 더 많이 씀)
+- 비동식 요청 처리
+ 1) 자바스크립트 코드
+ 2) jQuery
+ 3) fetch 사용
+ 4) axios 사용
+
+ - JSON
+ 서버와 클라이언트가 주고받는 데이터 형식
+ 자바스크립트 객체 
+ { userId: 1, id: 1, title: 'delectus aut autem', completed: false }
+
+ JSON(JavaScript Object Notation) : 자바스크립트 객체 문법으로 데이터 표현하기 위한 문자기반의 포맷
+ {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+}
+
+json 배열
+[
+ {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+ }
+ {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+ }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

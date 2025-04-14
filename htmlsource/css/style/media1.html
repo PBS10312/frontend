@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: yellowgreen;
+            height: 150px;
+        }
+        /* 721~960px 까지 */
+        @media screen and (max-width: 960px) {
+            .container{
+                background-color: gold;
+            }
+        }
+        /* 521~720px 까지 */
+        @media screen and (max-width: 720px) {
+            .container{
+                background-color: purple;
+            }
+        }
+        /* 0~520px 까지 */
+        @media screen and (max-width: 520px) {
+            .container{
+                background-color: aqua;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>

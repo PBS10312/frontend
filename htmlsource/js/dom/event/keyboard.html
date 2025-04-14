@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" name="text" id="text" />
+    </div>
+    <script>
+      // input 상자에서 엔터키가 입력이 되면 값을 가져오기
+      // 키보드 이벤트
+      // keydown : 키를 누를때
+      // keyup : 키에서 손을 땔떼
+      document.querySelector("#text").addEventListener("keydown", (e) => {
+        if (e.keyCode == 13) {
+          //   alert("엔터");
+          console.log(e.target.value);
+        }
+      });
+    </script>
+  </body>
+</html>

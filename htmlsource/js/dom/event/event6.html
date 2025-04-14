@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="./pic_bulboff.gif" alt="" />
+
+    <script>
+      // img 클릭 시 on <=> off
+      const img = document.querySelector("img");
+      //   img.addEventListener("click", () => (img.src = "./pic_bulbon.gif")); 일단 켜지는거
+
+      //   img.addEventListener("click", () => {
+      //     if (img.src.includes("pic_bulboff.gif")) {
+      //       img.src = "./pic_bulbon.gif";
+      //     } else {
+      //       img.src = "./pic_bulboff.gif";
+      //     }
+      //   });
+      let mode = false;
+      img.addEventListener("click", (e) => {
+        if (!mode) {
+          img.src = "./pic_bulbon.gif";
+          mode = true;
+        } else {
+          img.src = "./pic_bulboff.gif";
+          mode = false;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #rank {
+        border: 2px solid green;
+        border-radius: 5px;
+        padding: 10px;
+        padding-left: 20px;
+        padding: 15px;
+        width: 600px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div class="box1">일별 박스 오피스</div>
+      <div class="box2">
+        <input type="text" name="txtYear" id="txtYear" size="4" />
+        <select name="selMon" id="selMon">
+          <option value="01">1월</option>
+          <option value="02">2월</option>
+          <option value="03">3월</option>
+          <option value="04">4월</option>
+          <option value="05">5월</option>
+          <option value="06">6월</option>
+          <option value="07">7월</option>
+          <option value="08">8월</option>
+          <option value="09">9월</option>
+          <option value="10">10월</option>
+          <option value="11">11월</option>
+          <option value="12">12월</option>
+        </select>
+        <select name="selDay" id="selDay">
+          <option value="1">01일</option>
+          <option value="2">02일</option>
+          <option value="3">03일</option>
+          <option value="4">04일</option>
+          <option value="5">05일</option>
+          <option value="6">06일</option>
+          <option value="7">07일</option>
+          <option value="8">08일</option>
+          <option value="9">09일</option>
+          <option value="10">10일</option>
+          <option value="11">11일</option>
+          <option value="12">12일</option>
+          <option value="13">13일</option>
+          <option value="14">14일</option>
+          <option value="15">15일</option>
+          <option value="16">16일</option>
+          <option value="17">17일</option>
+          <option value="18">18일</option>
+          <option value="19">19일</option>
+          <option value="20">20일</option>
+          <option value="21">21일</option>
+          <option value="22">22일</option>
+          <option value="23">23일</option>
+          <option value="24">24일</option>
+          <option value="25">25일</option>
+          <option value="26">26일</option>
+          <option value="27">27일</option>
+          <option value="28">28일</option>
+          <option value="29">29일</option>
+          <option value="30">30일</option>
+          <option value="31">31일</option>
+        </select>
+        <button type="button">확인</button>
+        <!-- 영화내역보여주기 -->
+        <div id="rank"></div>
+        <!-- 영화상세정보 -->
+        <div id="info"></div>
+      </div>
+    </form>
+    <script src="./movie.js"></script>
+  </body>
+</html>

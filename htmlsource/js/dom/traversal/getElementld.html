@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header1"><i>Header 1</i></h1>
+    <h2 id="header2">Header 2</h2>
+    <form action="" method="get" class="form">
+      <div>
+        <input type="text" name="username" id="username" />
+        <button type="submit">확인</button>
+      </div>
+    </form>
+    <script>
+      //h1 요소 가져오기
+      //   let h1 = document.body.firstElementChild;
+      let h1 = document.getElementById("header1");
+      console.log(h1);
+      let h2 = document.getElementById("header2");
+      console.log(h2);
+      let username = document.getElementById("username");
+      console.log(username);
+
+      // h1 안의 text 가져오기
+      console.log(h1.textContent);
+      console.log(h1.innerHTML); // <i>Header 1</i>
+      // h1 text 변경하기
+      // h1.textContent = "Change H1";
+      h1.innerHTML = "<i>Change H1</i>";
+      // id 속성 값 가져오기
+      console.log(h1.id);
+
+      // id없는 요소 가져오기
+      let btn = document.getElementsByTagName("button");
+      console.log(btn[0]);
+      // 요소 찾을 때 css 선택자 모두 사용가능
+      // querySelector() , querySeletorAll()
+      h1 = document.querySelector("#header1");
+      h2 = document.querySelector("#header2");
+      btn = document.querySelector("button");
+      let form = document.querySelector(".form");
+    </script>
+  </body>
+</html>

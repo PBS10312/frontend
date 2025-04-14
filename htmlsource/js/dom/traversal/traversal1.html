@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      alert("head " + document.body);
+    </script>
+  </head>
+  <body>
+    <p>Hello World</p>
+    <script>
+      alert("head " + document.head);
+      alert("body " + document.body);
+    </script>
+  </body>
+</html>
+<!-- 
+  브라우저는 HTML, CSS 파싱 후 HTML => DOM 트리 , CSS => CSSOM 트리
+  자바스크립트에서 DOM 트리 접근 가능
+  1) 프로퍼티 이용 : childNodes, children
+-->

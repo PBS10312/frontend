@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:disabled{
+            outline: none; /* input 에 원래 있던 테두리 제거 */
+            border: 2px solid #ccc; /* 테두리 */
+            background: #ddd; /* 배경색 */
+        }
+        input:checked + span{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name" value="홍길동" disabled>
+        </fieldset>
+        <fieldset>
+            <legend>신청 과목</legend>
+            <p>신청 과목 선택</p>
+            <label>
+                <input type="radio" name="subject" id="" value="speaking" >
+                <span>회화</span>
+            </label>
+            <label>
+                <input type="radio" name="subject" id="" value="grammer">
+                <span>문법</span>
+            </label>
+            <label>
+                <input type="radio" name="subject" id="" value="writing">
+                <span>작문</span>
+            </label>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .alert-box {
+        background: skyblue;
+        padding: 20px;
+        color: white;
+        border-radius: 5px;
+        margin: 10px;
+        position: relative;
+        /* display: none; */
+      }
+      button {
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgb(54, 62, 228);
+        color: white;
+      }
+
+      .close {
+        position: absolute;
+        top: 6px;
+        right: 10px;
+      }
+      /* 알림창 숨기기 */
+    </style>
+  </head>
+  <body>
+    <div class="alert-box">
+      알림창
+      <span class="close">X</span>
+    </div>
+    <button class="show">버튼1</button>
+    <button class="show">버튼2</button>
+    <script>
+      const alertBox = document.querySelector(".alert-box");
+      // document.querySelector(".show1").addEventListener("click", () => {
+      //   document.querySelector(".alert-box").style.display = "block";
+      //   alert("아이디를 입력해 주세요");
+      // });
+      // 버튼1 클릭 시 알림창 => 아이디를 입력해 주세요
+      const btns = document.querySelectorAll("button");
+
+      // btns[0].addEventListener("click", () => {
+      //   alertBox.style.display = "block";
+      //   // textContent = "아이디를 입력해 주세요";
+      //   alertBox.innerHTML = '아이디를 입력해 주세요<span class="close">X</span>';
+      // });
+
+      btns[0].addEventListener("click", () => {
+        alertBox.style.display = "block";
+        alertBox.firstChild.nodeValue = "아이디를 입력해 주세요";
+        // alertBox.textContent = "아이디를 입력해 주세요";
+      });
+
+      // 버튼2 클릭 시 알림창 => 비밀번호를 입력해 주세요
+      // btns[1].addEventListener("click", () => {
+      //   alertBox.style.display = "block";
+      //   // alertBox.textContent = "비밀번호를 입력해 주세요";
+      //   alertBox.innerHTML = '비밀번호를 입력해 주세요<span class="close">X</span>';
+      // });
+
+      btns[1].addEventListener("click", () => {
+        alertBox.style.display = "block";
+        alertBox.firstChild.nodeValue = "비밀번호를 입력해 주세요";
+        // alertBox.textContent = "아이디를 입력해 주세요";
+      });
+
+      // document.querySelector(".show2").addEventListener("click", () => {
+      //   document.querySelector(".alert-box").style.display = "block";
+      //   alert("비밀번호를 입력해 주세요");
+      // });
+
+      // x 누르면 alert-box 닫기
+      document.querySelector(".close").addEventListener("click", () => {
+        document.querySelector(".alert-box").style.display = "none";
+      });
+    </script>
+  </body>
+</html>

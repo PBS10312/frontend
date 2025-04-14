@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 onclick="alert('경고')">Header</h1>
+    <h2>Header2</h2>
+    <div>
+      <a href="http://www.naver.com">네이버</a>
+    </div>
+    <button type="button">클릭1</button>
+    <button type="button">클릭2</button>
+    <script>
+      //이벤트 : 사이트에서 방문자가 취하는 모든 행위 (마우스 드래그 , 클릭,더블클릭,입력)
+      //이벤트 처리
+      // 1) 이벤트 핸들러 속성 이용
+      // 2) 이벤트 리스너 이용
+      //    이벤트 대상 찾기 , 이벤트명을 지정 , 함수 연결
+
+      // 이벤트 대상 : 버튼 찾기
+      // const btn1 = document.querySelector("button");
+      // const btn2 = document.querySelector("body button:nth-child(3)");
+      // console.log(btn1);
+      // console.log(btn2);
+
+      const btns = document.querySelectorAll("button");
+      console.log(btns[0]);
+      console.log(btns[1]);
+
+      // 클릭 => 첫번째 안녕하세요 , 두번째 안녕하세요 홍길동님
+      const hello1 = () => alert("안녕하세요");
+      const hello2 = () => alert("안녕하세요!! 홍길동님");
+
+      btns[0].addEventListener("click", hello1);
+      btns[1].addEventListener("click", hello2);
+
+      //h2 클릭이 되면 text 변경 (Good Job!!)
+      // const h2 = document.querySelector("h2");
+      // h2.addEventListener("click", () => (h2.textContent = "Good Job!!"));
+
+      // 클릭 옆에 e 는 event의 약자임
+      document.querySelector("h2").addEventListener("click", (e) => (e.target.textContent = "Good Job!!"));
+
+      // a 클릭 시 text 가져오기
+      const tag = document.querySelector("a");
+      tag.addEventListener("click", (e) => {
+        e.preventDefault(); // 이벤트 중지
+        console.log(e.target.textContent);
+      });
+    </script>
+  </body>
+</html>

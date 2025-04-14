@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button type="button">Trun on the light</button>
+      <img src="./pic_bulboff.gif" alt="" />
+      <button type="button">Trun off the light</button>
+    </div>
+    <script>
+      //   const img = document.querySelector("img");
+      //   const btns = document.querySelector("div");
+      //   // turn off the light 버튼 클릭 시 img src 변경 : "./pic_buttoff.gif"
+      //   btns[0].addEventListener("click", (e) => (img.src = "./pic_buttoff.gif"));
+      //   // turn on the light 버튼 클릭 시 img src 변경 : "./pic_button.gif"
+      //   btns[1].addEventListener("click", (e) => (e.target, (img.src = "./pic_button.gif")));
+
+      const btns = document.querySelectorAll("button");
+      const img = document.querySelector("img");
+      //   //   // turn off the light 버튼 클릭 시 img src 변경 : "./pic_buttoff.gif"
+      //   btns[0].addEventListener("click", () => (img.src = "./pic_button.gif"));
+      //   //   // turn on the light 버튼 클릭 시 img src 변경 : "./pic_button.gif"
+      //   btns[1].addEventListener("click", () => (img.src = "./pic_buttoff.gif"));
+
+      // 이벤트버블링
+      document.querySelector("div").addEventListener("click", (e) => {
+        // 이벤트가 어디서 왔을까요~? (id,class,name)
+        console.log(e.target.textContent);
+        console.log(typeof e.target.textContent);
+        const text = e.target.textContent;
+        // string => string 객체 메소드 이용
+        if (text.includes("on")) {
+          img.src = "./pic_bulboff.gif";
+        } else {
+          img.src = "./pic_bulbon.gif";
+        }
+      });
+    </script>
+  </body>
+</html>

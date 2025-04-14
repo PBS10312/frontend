@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      <div>
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <button type="submit">보내기</button>
+      </div>
+    </form>
+    <script>
+      // form에 sumbit 이벤트 발생 시 sumbit 이벤트 중지
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        //   이벤트 일어난 대상 가져오기 (e.target), 이벤트 발생 개상의 부모 요소 가져오기 , 이벤트 중지(preventDefault())
+
+        console.log("e.target ", e.target);
+        // name에 입력한 값을 가져오기
+        // const name = document.querySelector("#name");
+        const name = e.target.name;
+        console.log(name.value);
+        // 글자 수가 2자리 이상인지 확인한 후 경고 메세지 띄우기
+        if (name.value.length < 2) {
+          alert("이름을 확인해 주세요");
+          //   name.focus();
+          name.select();
+          return;
+        }
+      });
+    </script>
+  </body>
+</html>

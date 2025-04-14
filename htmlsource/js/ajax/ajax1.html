@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Title</h1>
+    <div></div>
+    <script>
+      fetch("https://PBS10312.github.io/data/data.txt")
+        .then((res) => {
+          // res.ok == 200 정상
+          //           400 (404-경로 틀림 , 403-권한없음)
+          //           500 (서버에러)
+          if (!res.ok) throw new Error("경로를 확인해 주세요");
+          return res.text();
+        })
+        .then((data) => {
+          console.log(data);
+          // div 영역에 결과를 보여주기
+          document.querySelector("div").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

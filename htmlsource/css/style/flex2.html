@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex; /* block,inline,inline-block,none,flex */
+            /*flex-direction: row;  row(default) */
+            flex-wrap: wrap;  /* nowrap(default) - 부모크기가 줄어들면 자식도 같이 줄어든다 / wrap*/
+            /* justify-content: space-between; */
+            align-content: space-evenly;
+            height: 400px;
+            border: 2px solid;
+        }
+        .container div{
+            width: 200px;
+            height: 100px;
+
+            /* float: left; */
+        }
+        .container .item:nth-child(1){
+            background-color: red;
+        }
+        .container .item:nth-child(2){
+            background-color: yellow;
+        }
+        .container .item:nth-child(3){
+            background-color: aqua;
+        }
+        .container .item:nth-child(4){
+            background-color: black;
+        }
+        .container .item:nth-child(5){
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        flex   
+        -수평 배치 : float,inline-block 사용
+         float : 해제 코드 필요 / inline-block : 자동처리되는 공백이 있음
+        -수평 배치 개선 방법 : flex 
+
+        flex 
+        1) 컨테이너(상하,좌우 배치되어야 할 아이템을 가지고 있는 부모 요소)
+           -display , flex-direction , flex-wrap(본인의 크기는 유지)
+           -주축(x축) : display:row 일 때는 x축 , display:column y축
+           -교차축 (y축): display:row 일 때는 y축 , display:column x축
+           - justify-content : 
+             1. flex-start : 왼쪽정렬
+             2. flex-end : 오른쪽정렬
+             3. center : 가운데정렬
+             4. space-between : 첫요소, 마지막 요소는 양쪽 끝으로 붙인 후 남은 여백 나눠서 할당
+             5. space-evenly : 모든 요소의 공백을 동일하게
+             6. space-around : 요소들의 좌우 여백을 동일하게(중첩되는 영역은 다른 영역보다 커짐)
+             
+             - align-content: flex-wrap : wrap 상태에서 교차 축의 정렬 방법
+               justify-content 와 동일 
+        2) 아이템
+    
+    
+    -->
+    <div class="container">
+        <div class="item">flex-item1</div>
+        <div class="item">flex-item2</div>
+        <div class="item">flex-item3</div>
+        <div class="item">flex-item4</div>
+        <div class="item">flex-item5</div>
+    </div>
+</body>
+</html>

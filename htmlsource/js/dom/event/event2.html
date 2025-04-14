@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <talbe id="outside">
+      <tr>
+        <td id="t1">one</td>
+      </tr>
+      <tr>
+        <td id="t2">two</td>
+      </tr>
+    </talbe>
+    <script>
+      // outside 클릭 시 t2 가 two => three . three => two
+      function modifyText() {
+        // t2가 two => three , three => two
+        // t2 글자 가져오기 / t2 글자 two? three?
+        const t2 = document.querySelector("#t2");
+        t2.textContent = t2.textContent === "two" ? "three" : "two";
+      }
+      document.querySelector("#outside").addEventListener("click", modifyText);
+    </script>
+  </body>
+</html>

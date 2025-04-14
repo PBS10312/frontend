@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 국어 ,영어 ,수학 점수를 입력받은 후 평균 학점 출력
+      //  >=90 A , >=80 B , >=70 C , >=60 D , F
+      let input1 = Number(prompt("국어 점수를 입력해 주세요"));
+      let input2 = Number(prompt("영어 점수를 입력해 주세요"));
+      let input3 = Number(prompt("수학 점수를 입력해 주세요"));
+
+      const avg = (input1 + input2 + input3) / 3;
+
+      //   if (avg >= 90) {
+      //     document.write("<h3>A<h3>");
+      //   } else if (avg >= 80) {
+      //     document.write("<h3>B<h3>");
+      //   } else if (avg >= 70) {
+      //     document.write("<h3>C<h3>");
+      //   } else if (avg >= 60) {
+      //     document.write("<h3>D<h3>");
+      //   } else {
+      //     document.write("<h3>F<h3>");
+      //   }
+
+      switch (parseInt(avg / 10)) {
+        case 10:
+        case 9:
+          document.write("<h3>A<h3>");
+          break;
+
+        case 8:
+          document.write("<h3>B<h3>");
+          break;
+
+        case 7:
+          document.write("<h3>C<h3>");
+          break;
+
+        case 6:
+          document.write("<h3>D<h3>");
+          break;
+
+        default:
+          document.write("<h3>F<h3>");
+          break;
+      }
+    </script>
+  </body>
+</html>

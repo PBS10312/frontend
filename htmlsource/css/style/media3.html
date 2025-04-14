@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 여백 0 */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* body 배경색 : #ecf0f1 */
+      body {
+        background-color: #ecf0f1;
+      }
+      /* wrapper : max-width : 60rem , width 100%,  */
+      /* @media screen and (max-width: 60rem){
+            .wrapper{
+                max-width: 100%;
+            }
+        } */
+      .wrapper {
+        width: 100%;
+        max-width: 60rem;
+        margin: 2rem auto;
+      }
+      /* flexbg : flex 컨테이너 */
+      /* .flexbg{
+            display:  flex;
+            align-items: center;
+            height: 100px;
+            justify-content: center;
+            flex-grow: 1;
+            flex-basis: 0;
+
+        } */
+      .flexbg {
+        display: flex;
+      }
+      /* main : 배경색 흰색, 안쪽여백 25 ,order2 */
+      .flexbg main {
+        background-color: white;
+        padding: 25px;
+        order: 2;
+      }
+      .flexbg .siderbar {
+        padding: 25px;
+        width: 20%;
+      }
+      /* left : 배경색 #3498db ,order1 */
+      .flexbg .left {
+        background-color: #3498db;
+        order: 1;
+      }
+      /* right : 배경색 #34495e ,order3 */
+      .flexbg .right {
+        background-color: #34495e;
+        order: 3;
+      }
+
+      /* 481~768 */
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          /* display: flex; */
+          flex-wrap: wrap;
+        }
+        .flexbg .siderbar {
+          width: 50%;
+        }
+        .flexbg main {
+          width: 100%;
+          order: 1;
+        }
+      }
+      .flexbg .left {
+        order: 2;
+      }
+
+      /* 0~480 */
+      @media screen and (max-width: 480px) {
+        .flexbg .siderbar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita nostrum culpa obcaecati neque nobis,
+          voluptatibus voluptate tempora quis, quos debitis laboriosam amet ad porro harum facere quas eligendi,
+          corporis omnis nam fugiat consequatur dolor laudantium praesentium. Adipisci reprehenderit exercitationem
+          nesciunt cum, optio atque minus eveniet sit rerum, saepe expedita asperiores ullam dolores molestiae. Nulla
+          ducimus nisi nobis, recusandae facere aliquam atque odit cumque, esse, sed magni autem fugiat voluptatibus
+          molestiae beatae! Placeat eveniet earum a rerum optio vitae voluptate dolores? Animi debitis quis error quos
+          soluta dolor a labore nisi magni facere provident omnis, non, aspernatur sequi porro ipsum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita nostrum culpa obcaecati neque nobis,
+          voluptatibus voluptate tempora quis, quos debitis laboriosam amet ad porro harum facere quas eligendi,
+          corporis omnis nam fugiat consequatur dolor laudantium praesentium. Adipisci reprehenderit exercitationem
+          nesciunt cum, optio atque minus eveniet sit rerum, saepe expedita asperiores ullam dolores molestiae. Nulla
+          ducimus nisi nobis, recusandae facere aliquam atque odit cumque, esse, sed magni autem fugiat voluptatibus
+          molestiae beatae! Placeat eveniet earum a rerum optio vitae voluptate dolores? Animi debitis quis error quos
+          soluta dolor a labore nisi magni facere provident omnis, non, aspernatur sequi porro ipsum.
+        </p>
+      </main>
+      <aside class="siderbar left">
+        <p>You might have some latest posts here on the left</p>
+      </aside>
+      <aside class="siderbar right">
+        <p>And some other widgets here on the right</p>
+      </aside>
+    </div>
+  </body>
+</html>

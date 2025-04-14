@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Header1</h1>
+    <h2>Header2</h2>
+    <button type="button">클릭</button>
+    <script>
+      // 버튼을 클릭(이벤트)하면 h1 요소 제거
+      // h1 요소 찾기
+      const h1 = document.querySelector("h1");
+      // 버튼 찾기
+      const btn = document.querySelector("button");
+      // btn.addEventListener("이벤트명",함수)
+      // function func() {}
+      // const func = function(){}
+      // const func = () =>{}
+      btn.addEventListener("click", () => h1.remove());
+
+      // 두 가지 연결 시키기
+    </script>
+  </body>
+</html>

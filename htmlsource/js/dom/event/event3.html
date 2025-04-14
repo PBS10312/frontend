@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* #target {
+        background-color: lightblue;
+      } */
+    </style>
+  </head>
+  <body id="target">
+    <div>
+      <input type="radio" name="color" id="" value="lightblue" />파랑
+      <input type="radio" name="color" id="" value="green" />초록
+    </div>
+    <script>
+      //   const color = document.querySelectorAll("#target");
+      //   color.addEventListener("click", () => (color.style.backGroundColor = "blue"));
+      //   console.log(color);
+
+      const rdos = document.querySelectorAll("[type ='radio']");
+      //   console.log(rdos[0]);
+      //   console.log(rdos[1]);
+
+      // 파랑 radio 클릭되면 body 배경색 파랑
+      //   rdos[0].addEventListener("click", () => (document.body.style.backgroundColor = "lightblue"));
+      // 초록 radio 클릭되면 body 배경색 초록
+      //   rdos[1].addEventListener("click", () => (document.body.style.backgroundColor = "green"));
+
+      function changeColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+      //   rdos[0].addEventListener("click", (e) => {
+      //     const value = e.target.value;
+      //     console.log(value);
+      //     changeColor(e.target.value);
+      //   });
+      //   rdos[1].addEventListener("click", (e) => {
+      //     const value = e.target.value;
+      //     console.log(value);
+      //     changeColor(e.target.value);
+      //   });
+
+      // 이벤트버블링 : 라디오 클릭 시 부모한테 이벤트 전달됨
+      const colorNode = document.querySelector("div");
+      colorNode.addEventListener("click", (e) => changeColor(e.target, value));
+    </script>
+  </body>
+</html>

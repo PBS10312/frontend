@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ul li:first-child{
+            text-decoration: underline;
+        }
+        ul li:last-child{
+            text-decoration: line-through;
+        }
+        ul li:nth-child(3){
+            color: lime;
+        }
+        ul li:nth-child(2n){
+            background-color: silver;
+        }
+        ul li:nth-child(2n+1){
+            background-color: gold;
+        } */
+        /* 4번째 이상부터 배경색 지정 */
+        ul li:nth-child(n+4){
+            background-color: lawngreen;
+        }
+        .fruit p:nth-child(2){
+            color: violet;
+        }
+        table,th,td{
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+        /* table tr:nth-child(2n){
+            background: lightcoral;
+        } */
+        /* table tr:hover{
+            background: black;
+        } */
+        table tr:hover:nth-child(2n){
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>List item1</li>
+        <li>List item2</li>
+        <li>List item3</li>
+        <li>List item4</li>
+        <li>List item5</li>
+        <li>List item6</li>
+        <li>List item7</li>
+    </ul>
+    <ul class="fruit">
+        <div>딸기</div>
+        <p>사과</p>
+        <li>오렌지</li>
+        <span>망고</span>
+    </ul>
+    <table>
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+        </tr>
+        <tr>
+            <td>컬럼1</td>
+            <td>컬럼2</td>
+            <td>컬럼3</td>
+        </tr>
+        <tr>
+            <td>컬럼1</td>
+            <td>컬럼2</td>
+            <td>컬럼3</td>
+        </tr>
+        <tr>
+            <td>컬럼1</td>
+            <td>컬럼2</td>
+            <td>컬럼3</td>
+        </tr>
+    </table>
+</body>
+</html>

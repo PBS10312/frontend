@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg light">
+      <div class="container-fluid">
+        <span class="navbar-brand">JSShop</span>
+        <span class="badge bg-dark">Dark 🔁</span>
+      </div>
+    </nav>
+    <script>
+      // badge 클릭 시 클래스명 변경 bg-dark => bg-warning , 글자색생 검정 , light  🔁
+      //                             bg-warning => bg-dark  글자색상 흰색 , Dark 🔁
+      const bg = document.querySelector(".badge");
+      //   bg.addEventListener("click", () => {
+      //     bg.classList.replace("bg-dark", "bg-warning");
+      //     bg.style.color = "black";
+      //   });
+      let mode = true;
+      bg.addEventListener("click", () => {
+        if (mode) {
+          bg.classList.replace("bg-dark", "bg-warning");
+          bg.style.color = "black";
+          bg.textContent = "Light 🔁";
+          mode = false;
+        } else {
+          bg.classList.replace("bg-warning", "bg-dark");
+          bg.style.color = "white";
+          bg.textContent = "Dark 🔁";
+          mode = true;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header" class="one two four">Header 1</h1>
+    <button type="button">글자색 변경</button>
+    <img src="" alt="" />
+    <button type="button">이미지 가져오기</button>
+    <script>
+      const h1 = document.getElementById("header");
+      // h1 클래스명 가져오기
+      console.log(h1.classList);
+      // 클래스명 변경(one => header)
+      document.querySelector("button").addEventListener("click", () => h1.classList.replace("one", "header"));
+      //   h1.classList.replace("one", "header");
+
+      // 클래스명 추가
+      h1.classList.add("three");
+
+      // 없으면 추가하고 있으면 제거한다
+      h1.classList.toggle("four");
+      // 클래스 이름 제거
+      h1.classList.remove("two");
+
+      // 이미지 가져오기 클릭 시 img 태그 가져와서 src 변경하기
+      const btn2 = document.querySelector("button:last-of-type");
+      console.log(btn2);
+      btn2.addEventListener("click", () => {
+        // img 태그 가져오기
+        const img = document.querySelector("img");
+        //src 변경
+        img.src = "../../../images/1.jpg";
+      });
+
+      //   h1 텍스트 변경 : 타이틀
+      console.log(h1.textContent);
+      h1.textContent = "타이틀";
+    </script>
+  </body>
+</html>
